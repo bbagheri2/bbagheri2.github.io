@@ -1,32 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Your Name</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Behnaz Bagheri</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Dr. Your Name</h1>
-    <nav>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-container">
+      <!--<img src="images/bagheri.png" alt="Logo" class="logo"> -->
+      <span class="site-title">Behnaz Bagheri Research Group</span>
+    </div>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="research.html">Research</a>
+	  <a href="research.html">Teaching</a>
       <a href="publications.html">Publications</a>
-      <a href="people.html">People</a> <!-- NEW -->
+      <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>I am an Assistant Professor at [Your University], working on [your field of research].</p>
-  </main>
+ <section class="hero">
+   <div class="hero-img"></div>
+   <!--<div class="hero-text">
+     <h1>Your Name</h1>
+     <p>Welcome to my website!</p>
+   </div> -->
+ </section>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
+  <!-- Research Section -->
+  <section class="research">
+    <div class="container">
+      <h2>Research</h2>
+      <p>My research focuses on plasma interactions with complex systems, including applications in biomedical devices and semiconductor manufacturing.</p>
+      <a href="research.html" class="read-more">Read More</a>
+    </div> 
+  </section>
+
+  <!-- News and Events Section -->
+  <section class="news">
+    <div class="container">
+	  <div class="section-header">
+	        <hr class="line">
+	        <h2 class="section-title">News and Events</h2>
+	        <hr class="line">
+	  </div>
+      <p>Stay updated on the latest news and events related to my research and academic work.</p>
+      <a href="news.html" class="read-more">Read More</a>
+    </div>
+  </section>
+
+  <!-- Latest Publications Section -->
+  <section class="publications">
+    <div class="container">
+  	  <div class="section-header">
+  	        <hr class="line">
+  	        <h2 class="section-title">Latest Publications</h2>
+  	        <hr class="line">
+  	  </div>
+      <ul>
+        <li><a href="#">Title of Recent Publication 1</a></li>
+        <li><a href="#">Title of Recent Publication 2</a></li>
+        <li><a href="#">Title of Recent Publication 3</a></li>
+      </ul>
+      <a href="publications.html" class="read-more">See All Publications</a>
+    </div>
+  </section>
+
+  <!-- Contact Information Section -->
+  <section class="contact">
+    <div class="container">
+       <div class="section-header">
+    	        <hr class="line">
+    	        <h2 class="section-title">Contact</h2>
+    	        <hr class="line">
+      </div>
+      <p>If you'd like to get in touch or have any questions, feel free to reach out!</p>
+      <address>
+        <strong>Your Name</strong><br>
+        Your Institution<br>
+        Your City, Country<br>
+        Email: <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </address>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="container">
+    <hr class="footer-divider" />
+  </div>
+  <footer class="site-footer">
+  <!-- Footer content -->
+    <p>&copy; 2025 Behnaz Bagheri. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
-
