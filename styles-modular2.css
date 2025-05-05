@@ -53,7 +53,7 @@ body {
 }
 
 .nav-links a {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-left: 1rem;
   text-decoration: none;
   color: #36454f;
@@ -182,10 +182,14 @@ body {
   top: 20%;
 }
 
+.about-page h1 {
+  font-size: 1.8rem;
+}
+
 .about-page .hero-subtext {
-  font-size: 1.2rem;
-  max-width: 950px;
-  width: 90%;
+  font-size: 1.25rem;
+  max-width: 2100px;
+  width: 100%;
   margin-top: 0.5rem;
 }
 
@@ -202,6 +206,7 @@ body {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 1rem;
 }
 
 .about-page .hero-background {
@@ -227,53 +232,98 @@ body {
 }
 
 .about-page .team-member-row {
+  width: 70vw !important;
+  max-width: 800px !important;
+  padding: 1rem !important;
+  margin: 1rem auto;        /* Center and reduce vertical spacing */
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 0;
   background-color: #f1f3f8;
   border-radius: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  width: 95vw;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+/* General styles for team members container */
+.about-page .team-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Centers the content */
+  gap: 1rem;  /* Adds space between the team member containers */
+  padding: 1rem;
+  margin-top: -2rem;
+  
+}
+
+/* Individual team member container */
+.about-page .team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;  /* Control the width */
+  height: auto;  /* Adjust height automatically */
+  margin: 0 auto;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to scale the container */
+.about-page .team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .team-member-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styling for team member image */
 .about-page .team-member-image {
-  flex: 1 2 250px;
-  max-width: 300px;
+  width: 100%;
+  height: 350px;  /* Adjust height of the image */
+  overflow: hidden;
 }
 
 .about-page .team-member-image img {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensure image covers the area without distortion */
 }
 
+/* Styling for team member info */
 .about-page .team-member-info {
-  flex: 2 1 400px;
+  text-align: center;
+  margin-bottom: -1rem;
+  max-width: 100%;
+  flex: 1 1 100%;
+  margin-top: 2rem;
 }
 
 .about-page .team-member-info h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: #36454f;
+  margin-bottom: 0.5rem;
   font-weight: normal;
-  margin-bottom: 10px;
-  color: #444;
 }
 
 .about-page .team-member-info .role {
+  font-size: 1.0rem;
   font-weight: normal;
-  color: #444;
-  margin-bottom: 8px;
+  color: #555;
 }
 
 .about-page .team-member-info .description {
-  font-size: 1.1rem;
-  color: #444;
-  max-width: 1200px;
+  font-size: 0.8rem;
+  color: #777;
+  
+}
+
+@media (max-width: 768px) {
+  .about-page .team-member {
+    width: 100%;  /* Make the container full-width on smaller screens */
+    margin: 0.5rem 0;
+  }
 }
 
 /* Responsive Team Members */
@@ -281,16 +331,6 @@ body {
   .about-page .team-member-row {
     flex-direction: column;
     text-align: center;
-  }
-
-  .about-page .team-member-image,
-  .about-page .team-member-info {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .about-page .team-member-info {
-    margin-top: 1rem;
   }
 
   .nav-links {
@@ -304,6 +344,87 @@ body {
     margin: 0.5rem;
   }
 }
+
+/* These are for each team member in th inner links */
+.team-member-details-about {
+  position: relative;
+  margin-top: -300px; /* adjust overlap depth */
+  z-index: 2;
+  background-color: #e9f9f2; /* or whatever bg color suits your theme */
+  /*border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;*/
+  padding: 3rem 1.5rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}
+
+.team-member-details {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: -40px;
+}
+
+/* Styling for team member image */
+.team-member-details  .team-member-image {
+  width: auto;
+  height: 350px;  /* Adjust height of the image */
+  overflow: hidden;
+}
+
+.team-member-details .team-member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensure image covers the area without distortion */
+}
+
+/*.team-member-details .team-member-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}*/
+
+.team-member-details .team-member-info {
+  max-width: 900px;
+}
+
+.team-member-details .team-member-info h3 {
+  font-size: 1.5rem;
+}
+
+.team-member-details .team-member-info p.description {
+  font-size: 1.0rem;
+  line-height: 1.6;
+  line-height: 1.6;       /* Controls vertical spacing between lines */
+  text-align: justify;    /* Aligns both left and right edges */
+  max-width: 700px;       /* Controls line length for better readability */
+  margin: 0 auto;         /* Centers the paragraph if width is constrained */
+}
+
+
+.team-member-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.team-member-details ul li {
+  margin-bottom: 1rem;
+}
+
+.team-member-details ul li a {
+  text-decoration: none;
+  color: #0077b5;
+}
+
+.team-member-details ul li a:hover {
+  text-decoration: underline;
+}
+
+
 
 /* Research Section */
 .research {
@@ -414,10 +535,10 @@ ul li a:hover {
 }
 
 .site-footer {
-  background-color: #f1f3f8;
+  background-color: #e9f9f2 ; /*#f1f3f8;*/
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
   color: #888;
-  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
