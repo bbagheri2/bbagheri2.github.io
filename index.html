@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Behnaz Bagheri</title>
   <link rel="stylesheet" href="styles-modular2.css">
+  
+  <style>
+      @media (max-width: 768px) {
+        .logo-title-wrapper {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .nav-links {
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 1.5rem;
+        }
+
+        .news-item,
+        .research .container,
+        .publications .container,
+        .contact .container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .news-image img {
+          width: 90% !important;
+          height: auto;
+        }
+
+        .news-content,
+        .research p,
+        .contact address {
+          padding: 0 1rem;
+        }
+      }
+    </style>
+  
 </head>
 <body class="home-page">
 
